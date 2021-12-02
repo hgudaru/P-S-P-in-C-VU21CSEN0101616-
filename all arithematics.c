@@ -2,24 +2,38 @@
 int main()
 {
    int a,b,c;
-    printf("enter a number a ");
+   char operator;
+    printf("Enter value of a ");
     scanf("%d",&a);
-    printf("enter a number b ");
+    printf("Enter value of b ");
     scanf("%d",&b);
-     c = a+b;
+    printf("Enter an operator (+,-,%,*,/): ");
+    scanf("%c",&operator);
+    switch(operator)
+    {
+    case '+':
+    c = a+b;
     printf("a+b = %d \n",c);
+    break;
+    case '-':
     c = a-b;
     printf("a-b = %d \n",c);
+    break;
+    case '*':
     c = a*b;
     printf("a*b = %d \n",c);
+    break;
+    case '/':
     c = a/b;
     printf("a/b = %d \n",c);
+    break;
+    case '%':
     c = a%b;
     printf("Remainder when a divided by b = %d \n",c);
-    if(a>=b)
-    { printf("a is greater than b");}
-    else
-    { printf("a is less than b");}
+    break;
+    default:
+    printf("Enter correct choice");
+}
     return 0;
 }
 
